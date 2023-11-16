@@ -1,4 +1,4 @@
-install.packages("testthat")
+
 library(testthat)
 #ön hazırlık
 test_that("Çalışma alanındaki tüm değişkenleri sil", {
@@ -19,3 +19,15 @@ print(current_dir)
 relative_path <- file.path(current_dir, "Labex1_Q1_210401071_ahmet_kanadli.R")
 
 source(relative_path)
+
+
+
+#2.2
+
+test_that("Test : Data Frame'in adı 'maps' olmalıdır.", {
+  expect_true(exists("maps", envir = .GlobalEnv), info = "maps adlı değişken mevcut değil.")
+})
+
+
+
+
