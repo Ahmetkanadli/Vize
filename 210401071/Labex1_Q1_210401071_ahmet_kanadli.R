@@ -15,3 +15,12 @@ maps <- read.csv(dosya_isim, sep = ";", header = TRUE)
 
 print(dim(maps))
 
+print(maps)
+
+# 1.3
+
+maps$Latitude<-gsub("N","",as.character(maps$Latitude))
+maps$Latitude<-as.numeric(maps$Latitude)
+
+print(maps)
+
