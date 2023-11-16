@@ -6,17 +6,28 @@ download.file(dosya_url, destfile = dosya_isim, method = "auto",mode = "wb")
 
 #1.2 
 
-if (dim(maps)[1] == 10 && dim(maps)[2] == 9) {
-  cat(" data.frame boyutları doğru.\n")
-} else {
-  cat("Hata: Data frame boyutları yalnış.\n")
-}
+file.exists(dosya_isim)
 
-#1.3
+
+maps <- read.csv(dosya_isim, sep = ";", header = TRUE)
+
+
+
+print(dim(maps))
+
+print(maps)
+
+# 1.3
 
 maps$Latitude<-gsub("N","",as.character(maps$Latitude))
 maps$Latitude<-as.numeric(maps$Latitude)
 
+print(maps)
+
 # 1.4
 
 idx <- grep("W", maps$Longitude)
+
+#1.5
+
+maps$Longitude <- gsub("[EW]", "", maps$Longitude)
