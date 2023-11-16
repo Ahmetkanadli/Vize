@@ -1,4 +1,3 @@
-
 library(testthat)
 #ön hazırlık
 test_that("Çalışma alanındaki tüm değişkenleri sil", {
@@ -38,7 +37,7 @@ test_that("Test : maps nesnesi bir data.frame'dir.", {
   expect_is(maps, "data.frame", info = "maps nesnesi bir data.frame değil.")
 })
 
-# 2.4
+#2.4
 
 test_that("Test : maps adlı data.frame'in ilk sütunu 'City' olmalıdır.", {
   expect_equal(colnames(maps)[1], "City", info = "İlk sütun 'City' değil.")
