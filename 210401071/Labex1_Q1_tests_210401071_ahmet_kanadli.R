@@ -54,3 +54,9 @@ test_that("Test : maps adlı data.frame'in 5. sütununun adında 'Title' kelimes
 test_that("Test : Latitude adlı sütun numeric değerlerden oluşmalıdır.", {
   expect_is(maps$Latitude, "numeric", info = "Latitude sütunu numeric değerlerden oluşmuyor.")
 })
+
+#2.7
+
+test_that("Test : Longitude adlı sütun numeric değerlerden oluşmalıdır.", {
+  expect_is(maps$Longitude, "numeric", info = "Longitude sütunu numeric değerlerden oluşmuyor.")
+})
